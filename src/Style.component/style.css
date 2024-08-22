@@ -1,0 +1,860 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-image: linear-gradient(to right, #b6d0e5, #fff, #b6d0e5);
+  /* overflow: hidden; */
+}
+.main {
+  width: 100%;
+  background-image: linear-gradient(to right, #b6d0e5, #c6d7e5, #b6d0e5);
+}
+.logo_words {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------- NAVBAR --------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 100px;
+  font-size: 18px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 450px;
+}
+.navSection ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.navSection ul li {
+  list-style: none;
+}
+.navSection ul li a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+.navSection ul li a:hover {
+  color: black;
+}
+.navSection ul li a:active {
+  color: red;
+}
+.nav-btn {
+  display: none;
+}
+/* -------------------------------- END OF NAVBAR --------------------------------- */
+
+/* -------------------------------- DETAILS --------------------------------- */
+
+/* padding: 0 32px; */
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  height: 100%;
+  position: relative;
+  /* color: white; */
+}
+
+.details h1 {
+  margin: 50px 0 16px 0;
+  font-size: 52px;
+  width: 500px;
+  text-align: center;
+  color: #051d52;
+}
+
+.details_description {
+  width: 700px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  margin-bottom: 100px;
+}
+
+.details_container {
+  position: relative;
+  margin: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  /* margin-bottom: 18px; */
+}
+.moredetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.moredetails p {
+  text-align: start;
+  font-size: 12px;
+  width: 300px;
+  color: #051d52;
+}
+.moredetails p:nth-child(2) {
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.moredetails img {
+  width: 50px;
+}
+.background_image {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+  z-index: 0;
+}
+.background {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Apply blur effect to the background */
+}
+
+.modal-content {
+  margin: 50px auto;
+  background-color: #b6d0e5;
+  padding: 20px;
+  border-radius: 8px;
+  width: 40%;
+  text-align: center;
+  z-index: 1001;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-content p,
+.modal-content h3 {
+  margin-top: 10px;
+  text-align: start;
+}
+
+/* -------------------------------- END OF DETAILS --------------------------------- */
+
+/* -------------------------------- DISCOVER --------------------------------- */
+.discover {
+  position: relative;
+  margin-bottom: 100px;
+}
+.discover h2 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 32px;
+}
+.description {
+  text-align: center;
+  padding: 10px;
+  width: 500px;
+  margin: 5px auto;
+}
+.types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 0 150px;
+}
+.typeSection {
+  border-radius: 10px;
+  position: relative;
+  height: 350px;
+  width: 150px;
+  margin-top: 32px;
+  flex-grow: 1;
+  transition: all 1s;
+}
+
+.typeSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.typeSection img:nth-child(4) {
+  object-position: center right;
+}
+.typeSection h3,
+.typeSection p {
+  padding: 18px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 1.5s, opacity 0.5s;
+}
+.typeSection p {
+  opacity: 0;
+}
+.typeSection:hover {
+  flex-grow: 5;
+}
+.typeSection:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* adjust the opacity to your liking */
+  z-index: 1;
+}
+.typeSection:hover h3 {
+  opacity: 0;
+}
+.typeSection:hover p {
+  z-index: 2;
+  opacity: 1;
+  bottom: 25px;
+}
+.dangers {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 100px;
+  gap: 30px;
+  text-align: center;
+}
+
+.danger_Section {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.danger_Section p {
+  line-height: 1.4;
+  font-size: 16px;
+}
+.danger_Section img {
+  width: 52px;
+}
+.description_image {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  z-index: -1;
+}
+.description_image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------------------------- END OF DISCOVER --------------------------------- */
+
+/* -------------------------------- RECORDS --------------------------------- */
+
+.records {
+  background-color: #051d52;
+  color: #fff;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+}
+.records h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  grid-column: 1/-1;
+  font-size: 32px;
+}
+.record_container {
+  border: 5px solid #10307696;
+  width: 300px;
+  height: 160px;
+  padding: 20px;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.record_container:hover {
+  border: 5px solid #fff;
+}
+.record_container p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.records img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* -------------------------------- END OF RECORDS --------------------------------- */
+
+/* ------------------- ORGANIZATION AND THEIR SUCCESS STORIES ----------------- */
+
+.organization {
+  margin: 100px 0;
+}
+.organization h2 {
+  text-align: center;
+  margin: 32px auto;
+  font-size: 32px;
+  width: 450px;
+}
+
+.cards {
+  position: relative;
+  height: 300px !important;
+  width: 250px !important;
+  cursor: pointer;
+}
+.cards h3 {
+  text-align: center;
+  font-size: 16px;
+}
+.card_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 28%;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.card_logo img {
+  width: 45px;
+}
+.success_story {
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  background-color: #fff;
+  bottom: 0;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+.card_container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+/* -------------------------------- END OF ORGANIZATION --------------------------------- */
+
+/* -------------------------------- GALLERY --------------------------------- */
+.gallery h2 {
+  font-size: 32px;
+  text-align: center;
+}
+.gallery_display {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.gallery_display h3 {
+  padding: 15px 25px;
+  cursor: pointer;
+}
+.gallery_display h3:hover {
+  border-radius: 10px;
+  background-color: #051d52;
+  color: #fff;
+}
+.gallery_container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+.gallery_container img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+.vid {
+  width: 350px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+}
+.vid video {
+  width: 100%;
+  height: 100%;
+}
+
+.vid button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; /* Ensures the button appears on top of the video */
+}
+
+.vid button,
+.vid p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1; /* Ensures the button or paragraph appears on top of the video */
+}
+
+.vid img {
+  width: 40px; /* Adjust the size of the icons as needed */
+  height: 40px;
+}
+/* -------------------------------- END OF GALLERY --------------------------------- */
+
+/* -------------------------------- GUIDELINES --------------------------------- */
+.guidelines {
+  margin: 10%;
+  background-color: #051d529d;
+  padding: 5%;
+  color: #fff;
+}
+.guidelines h2 {
+  font-size: 32px;
+  text-align: center;
+  margin: 30px;
+}
+.guidelines li {
+  margin-top: 10px;
+}
+/* -------------------------------- END OF GUIDELINES --------------------------------- */
+/* -------------------------------- GEOLOCATIONTICKER --------------------------------- */
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #051d52;
+  color: white;
+  font-size: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ticker {
+  display: flex;
+  padding-left: 100%;
+  animation: scroll 10s linear infinite;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* -------------------------------- END OF GEOLOCATIONTICKER --------------------------------- */
+/* --------------------------------------------- MEDIA QUERY -------------------------------- */
+
+@media (max-width: 1280px) {
+  .details_container {
+    gap: 5px;
+  }
+  .records {
+    grid-template-columns: 200px 200px 200px 200px;
+  }
+  .record_container {
+    width: 200px;
+  }
+  .record_container p {
+    font-size: 14px;
+  }
+  .card_container {
+    margin: 0 100px;
+  }
+  .card_logo img {
+    width: 35px;
+  }
+  .cards h3 {
+    font-size: 14px;
+  }
+  .success_story {
+    font-size: 10px;
+  }
+  .cards {
+    position: relative;
+    height: 250px !important;
+    width: 200px !important;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1024px) {
+  .nav-btn {
+    display: block;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #051d52;
+    transition: 1s;
+    transform: translateY(-100vh);
+    z-index: 1000000;
+    /* color: #fff; */
+  }
+  .navSection .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .responsive_nav {
+    transform: none;
+  }
+  .nav-btn-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .details_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+  .techniques,
+  .history,
+  .tent {
+    width: 300px;
+  }
+  .tent {
+    grid-column: 1/-1;
+    width: 358px;
+    margin: 0 auto;
+  }
+  .typeSection {
+    height: 180px;
+  }
+
+  .typeSection:hover {
+  }
+  .typeSection h3,
+  .typeSection p {
+    padding: 8px;
+  }
+  .typeSection h3 {
+    font-size: 12px;
+  }
+  .typeSection p {
+    font-size: 10px;
+  }
+  .typeSection:hover::after {
+    flex-grow: 5;
+    flex-grow: 10;
+  }
+  .dangers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .dangers img {
+    width: 30px;
+  }
+  .danger_Section {
+    width: 200px;
+  }
+  .dangers h3 {
+    font-size: 16px;
+  }
+  .dangers p {
+    font-size: 8px;
+  }
+  .dspart {
+    grid-column: 1/0;
+    margin: 10px auto;
+    margin-left: 10px;
+  }
+  .records {
+    grid-template-columns: 120px 120px 120px 120px;
+  }
+  .records h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 26px;
+  }
+  .record_container {
+    width: 120px;
+    height: 100px;
+    padding: 12px;
+  }
+  .record_container p {
+    font-size: 8px;
+    font-weight: 300;
+  }
+  .organization h2 {
+    margin: 32px auto;
+    font-size: 26px;
+    width: 450px;
+  }
+  .cards {
+    height: 200px !important;
+    width: 150px !important;
+  }
+  .cards h3 {
+    text-align: center;
+    font-size: 10px;
+  }
+  .card_logo {
+    padding: 6px;
+  }
+  .card_logo img {
+    width: 24px;
+  }
+  .success_story {
+    padding: 6px;
+    font-size: 8px;
+  }
+  .gallery_display {
+    gap: 8px;
+  }
+  .gallery_container {
+    display: grid;
+    grid-template-columns: 300px 300px;
+  }
+  .gclastchild {
+    grid-column: 1/-1;
+    margin: 0 auto;
+  }
+  .gallery_container img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .vid {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+  }
+  .vid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .vid img {
+    width: 40px; /* Adjust the size of the icons as needed */
+    height: 40px;
+  }
+  .guidelines h2 {
+    font-size: 16px;
+  }
+  .guidelines li {
+    font-size: 8px;
+  }
+  .record_container p {
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .modal-content {
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+    /* max-width: 277px; */
+    width: 62%;
+    text-align: center;
+    z-index: 1001;
+  }
+  .modal-content p,
+  .modal-content h3 {
+    margin-top: 10px;
+    text-align: start;
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 35px;
+    font-size: 18px;
+  }
+  .navSection ul li img {
+    width: 30px;
+  }
+  .details h1 {
+    font-size: 25px;
+    width: 338px;
+  }
+  .details_description {
+    width: 80%;
+    font-size: 12px;
+  }
+  .logo_words {
+    font-size: 16px;
+  }
+  .moredetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+  }
+  .moredetails p {
+    font-size: 6px;
+    font-weight: 800;
+  }
+  .techniques p,
+  .history p,
+  .tent p {
+    width: 120px;
+  }
+  .details_container {
+    width: 100%;
+  }
+  .techniques,
+  .history,
+  .tent {
+    width: 150px;
+  }
+  .moredetails img {
+    width: 30px;
+  }
+  .details_description {
+    margin-bottom: 0px;
+  }
+  .types {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 28px;
+    gap: 28px;
+  }
+  .description {
+    width: 320px;
+  }
+  .discover h2 {
+    font-size: 27px;
+  }
+  .dangers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .danger_Section {
+    width: 130px;
+  }
+  .records h2 {
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: 22px;
+  }
+  .records {
+    grid-template-columns: 120px 120px;
+  }
+  .organization {
+    margin: 50px 0;
+  }
+  .organization h2 {
+    font-size: 22px;
+    width: 261px;
+  }
+  .card_container {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cards:last-child {
+    grid-column: 1/-1;
+    margin: 0 auto;
+  }
+  element.style {
+    height: 300px;
+    width: 80%;
+    position: relative;
+  }
+  .gallery_container {
+    grid-template-columns: 1fr;
+  }
+}

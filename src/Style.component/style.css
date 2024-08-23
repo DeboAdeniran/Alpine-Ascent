@@ -601,17 +601,18 @@ body.modal-open {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 18px;
+    gap: 8px;
+    justify-items: center;
   }
-  .techniques,
-  .history,
-  .tent {
-    width: 300px;
+  .moredetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: auto;
   }
   .tent {
     grid-column: 1/-1;
-    width: 358px;
-    margin: 0 auto;
   }
   .typeSection {
     height: 180px;
@@ -775,7 +776,7 @@ body.modal-open {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    width: 200px;
+    width: auto;
   }
   .moredetails p {
     font-size: 6px;
